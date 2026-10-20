@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ca" data-theme="light" data-alt-lang="index.es.html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Assignatura CEAC d'Estudiar SMX: apunts, flashcards, tests i progrés de Comunicació Empresarial i Atenció al Client.">
+  <meta name="theme-color" content="#f5f1e8">
+  <title>CEAC | Estudiar SMX</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23266a56'/%3E%3Ctext x='32' y='41' font-family='Georgia,serif' font-size='14' font-weight='700' fill='%23fffdf8' text-anchor='middle'%3ESMX%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('estudiarSMX.theme.v1');
+        if (!theme) {
+          var raw = localStorage.getItem('rutaFP.ceac.u1.v1');
+          var saved = raw ? JSON.parse(raw) : null;
+          theme = saved && saved.theme;
+        }
+        if (!theme) {
+          var rawIpo = localStorage.getItem('rutaFP.u1.v1');
+          var savedIpo = rawIpo ? JSON.parse(rawIpo) : null;
+          theme = savedIpo && savedIpo.theme;
+        }
+        document.documentElement.dataset.theme = theme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      } catch (e) {}
+    })();
+  </script>
+  <script src="../../assets/js/lang.js"></script>
+</head>
+<body class="subject-ceac">
+  <a class="skip-link" href="#contenido">Salta al contingut</a>
+
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3Z"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-graduation" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></symbol>
+    <symbol id="i-trending" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  </svg>
+
+  <header class="site-header" id="top">
+    <div class="header-inner container">
+      <a class="brand" href="../../index.html" aria-label="Estudiar SMX, torna a l'inici">
+        <span class="brand-mark brand-mark-smx">SMX<span class="brand-dot"></span></span>
+        <span class="brand-text"><strong>Estudiar SMX</strong><small>CEAC</small></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navegació de l'assignatura">
+        <a href="../../index.html">Inici</a>
+        <a href="unidad-1.html">Unitat 1</a>
+        <a href="#progreso">Progrés</a>
+        <a href="#unidades">Unitats</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Idioma">
+          <span class="lang-option is-active" aria-current="true" lang="ca">CA</span>
+          <a class="lang-option" href="index.es.html" data-lang-link="es" hreflang="es" lang="es" aria-label="Canviar al castellà">ES</a>
+        </div>
+        <a class="header-cta" href="unidad-1.html">Estudia la unitat 1</a>
+        <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Activa el tema fosc">
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+        </button>
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Obre el menú" aria-expanded="false" aria-controls="mobileMenu">
+          <svg class="icon icon-menu" aria-hidden="true"><use href="#i-menu"></use></svg>
+          <svg class="icon icon-close" aria-hidden="true"><use href="#i-x"></use></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav class="container" aria-label="Menú mòbil">
+        <a href="../../index.html"><span>01</span>Inici</a>
+        <a href="unidad-1.html"><span>02</span>Unitat 1</a>
+        <a href="#progreso"><span>03</span>Progrés</a>
+        <a href="#unidades"><span>04</span>Unitats</a>
+        <a href="../../index.html#asignaturas"><span>05</span>Totes les assignatures</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <nav class="breadcrumbs container" aria-label="Fil d'Ariadna">
+      <a href="../../index.html">Inici</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">CEAC</span>
+    </nav>
+
+    <section class="subject-page-hero container" aria-labelledby="subjectTitle">
+      <div class="subject-page-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span>Assignatura · CEAC</p>
+        <h1 id="subjectTitle"><span>Comunicació</span> <span>Empresarial i <em>Atenció al Client</em>.</span></h1>
+        <p class="subject-page-lead">Aprèn a organitzar la informació, comunicar amb eficàcia i entendre com funciona una empresa per dins i per fora. La primera unitat arrenca amb l'empresa i la comunicació.</p>
+        <ul class="subject-meta">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-layers"></use></svg>1 unitat</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg>5 blocs</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-brain"></use></svg>27 flashcards</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-target"></use></svg>20 preguntes</li>
+        </ul>
+      </div>
+
+      <aside class="hero-panel subject-progress-panel" id="progreso" data-unit-page="ceac" aria-label="Progrés en CEAC">
+        <div class="panel-top">
+          <span class="panel-label">El teu progrés</span>
+          <span class="save-status"><span class="status-dot"></span>Es desa automàticament</span>
+        </div>
+        <div class="progress-hero">
+          <div class="progress-ring" data-unit-ring style="--p:0"><span data-unit-percent>0%</span></div>
+          <div class="progress-copy">
+            <strong data-unit-next-title>Comença per la Unitat 1</strong>
+            <p data-unit-next-text>Elements, principis, departaments i organigrames.</p>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div><span data-unit-sections>0/5</span><small>Blocs</small></div>
+          <div><span data-unit-cards>0/27</span><small>Flashcards</small></div>
+          <div><span data-unit-best>—</span><small>Millor test</small></div>
+        </div>
+        <a class="panel-link" href="unidad-1.html"><span>Entra a la Unitat 1</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+      </aside>
+    </section>
+
+    <section class="units-section container" id="unidades" aria-labelledby="unitsTitle">
+      <div class="section-heading compact">
+        <div>
+          <p class="kicker">Contingut de l'assignatura</p>
+          <h2 id="unitsTitle">Apunts i unitats</h2>
+        </div>
+        <p>Les unitats s'aniran afegint aquí. Cadascuna conserva els seus apunts, pràctiques i progrés.</p>
+      </div>
+
+      <div class="unit-grid">
+        <a class="unit-card" href="unidad-1.html" data-unit-card="ceac">
+          <span class="unit-card-head">
+            <span class="unit-number">01</span>
+            <span class="unit-status"><span class="status-dot"></span>Disponible</span>
+          </span>
+          <span class="unit-card-body">
+            <span class="unit-kicker">Unitat 1 · RA1</span>
+            <h3>Empresa i comunicació</h3>
+            <p>L'empresa i la seva organització, la informació, el procés de comunicació i l'eficàcia del missatge.</p>
+            <span class="unit-topics">
+              <span>Empresa</span>
+              <span>Informació</span>
+              <span>Comunicació</span>
+              <span>Eficàcia</span>
+            </span>
+          </span>
+          <span class="unit-card-foot">
+            <span class="unit-meta"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>8–10 min per bloc</span>
+            <span class="unit-progress-copy"><span data-unit-percent>0%</span> completat</span>
+            <span class="unit-cta">Entra<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+          </span>
+          <span class="unit-progress-bar"><span data-unit-bar style="--p:0%"></span></span>
+        </a>
+
+        <article class="unit-placeholder">
+          <span class="unit-placeholder-icon" aria-hidden="true">+</span>
+          <span class="unit-placeholder-kicker">Properament</span>
+          <h3>Noves unitats</h3>
+          <p>Aquest espai està preparat per incorporar més apunts i resultats d'aprenentatge de CEAC a mesura que avanci el curs.</p>
+          <span class="unit-placeholder-note">La mateixa assignatura, tot en ordre</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="subject-topics container" aria-labelledby="topicsTitle">
+      <div class="section-heading compact">
+        <div>
+          <p class="kicker">Dins de la Unitat 1</p>
+          <h2 id="topicsTitle">Què estudiaràs</h2>
+        </div>
+        <p>Pots entrar directament al bloc que necessitis repassar.</p>
+      </div>
+
+      <ol class="topic-list">
+        <li>
+          <a href="unidad-1.html#empresa">
+            <span class="topic-num">01</span>
+            <span class="topic-copy"><strong>L'empresa i la seva organització</strong><small>Elements, principis, departaments i organigrames.</small></span>
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="unidad-1.html#informacio">
+            <span class="topic-num">02</span>
+            <span class="topic-copy"><strong>La informació a l'empresa</strong><small>Sistemes, fonts i criteris d'utilitat.</small></span>
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="unidad-1.html#comunicacio">
+            <span class="topic-num">03</span>
+            <span class="topic-copy"><strong>El procés de comunicació</strong><small>Elements, etapes, tipus i interferències.</small></span>
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="unidad-1.html#empresa-comunicacio">
+            <span class="topic-num">04</span>
+            <span class="topic-copy"><strong>La comunicació a l'empresa</strong><small>Fluxos interns, canals i comunicació externa.</small></span>
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="unidad-1.html#eficacia">
+            <span class="topic-num">05</span>
+            <span class="topic-copy"><strong>L'eficàcia de la comunicació</strong><small>Missatge, canal, actituds i barreres.</small></span>
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </li>
+      </ol>
+    </section>
+
+    <section class="portal-callout container" aria-labelledby="unitStartTitle">
+      <div>
+        <p class="kicker">Tot a punt</p>
+        <h2 id="unitStartTitle">Comença la Unitat 1</h2>
+        <p>Teoria, flashcards, cinc afirmacions falses, un test de 20 preguntes i un resum final per repassar.</p>
+      </div>
+      <a class="btn btn-primary" href="unidad-1.html">Entra a la Unitat 1<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html" aria-label="Estudiar SMX, torna a l'inici">
+          <span class="brand-mark brand-mark-smx">SMX<span class="brand-dot"></span></span>
+          <span class="brand-text"><strong>Estudiar SMX</strong><small>CEAC</small></span>
+        </a>
+        <p>Assignatura CEAC dins d'Estudiar SMX. Apunts, pràctica i progrés per entendre l'empresa i comunicar millor.</p>
+        <a class="footer-back" href="../../index.html#asignaturas">← Veure totes les assignatures</a>
+      </div>
+      <div class="footer-links">
+        <div>
+          <span>CEAC</span>
+          <a href="unidad-1.html">Unitat 1</a>
+          <a href="unidad-1.html#flashcards">Flashcards</a>
+          <a href="unidad-1.html#test">Test</a>
+        </div>
+        <div>
+          <span>Estudiar</span>
+          <a href="unidad-1.html#empresa">L'empresa</a>
+          <a href="unidad-1.html#comunicacio">La comunicació</a>
+          <a href="unidad-1.html#eficacia">L'eficàcia</a>
+        </div>
+        <div>
+          <span>Repassar</span>
+          <a href="unidad-1.html#glosario">Glossari</a>
+          <a href="unidad-1.html#resumen">Resum</a>
+          <a href="../../index.html">Inici</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>Contingut elaborat a partir dels apunts de Comunicació Empresarial i Atenció al Client (RA1). Material d'estudi independent.</p>
+      <p>© <span id="year">2026</span> Estudiar SMX · Fet per estudiar millor.</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Torna a dalt">
+    <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+  </button>
+
+  <script src="../../assets/js/units-ca.js" defer></script>
+  <script src="../../assets/js/i18n.js" defer></script>
+  <script src="../../assets/js/portal.js" defer></script>
+</body>
+</html>

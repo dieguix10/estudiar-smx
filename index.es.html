@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="light">
+<html lang="es" data-theme="light" data-alt-lang="index.html">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +24,7 @@
       } catch (e) {}
     })();
   </script>
+  <script src="assets/js/lang.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -51,19 +52,23 @@
 
   <header class="site-header" id="top">
     <div class="header-inner container">
-      <a class="brand" href="index.html" aria-label="Estudiar SMX, volver al inicio">
+      <a class="brand" href="index.es.html" aria-label="Estudiar SMX, volver al inicio">
         <span class="brand-mark brand-mark-smx">SMX<span class="brand-dot"></span></span>
         <span class="brand-text"><strong>Estudiar SMX</strong><small>Apuntes y práctica</small></span>
       </a>
 
       <nav class="desktop-nav" aria-label="Navegación principal">
         <a href="#asignaturas">Asignaturas</a>
-        <a href="asignaturas/ipo/index.html">IPO</a>
-        <a href="asignaturas/ceac/index.html">CEAC</a>
+        <a href="asignaturas/ipo/index.es.html">IPO</a>
+        <a href="asignaturas/ceac/index.es.html">CEAC</a>
         <a href="#como-funciona">Cómo funciona</a>
       </nav>
 
       <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Idioma">
+          <span class="lang-option is-active" aria-current="true" lang="es">ES</span>
+          <a class="lang-option" href="index.html" data-lang-link="ca" hreflang="ca" lang="ca" aria-label="Cambiar al catalán">CA</a>
+        </div>
         <a class="header-cta" href="#asignaturas">Entrar a estudiar</a>
         <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Activar el tema oscuro">
           <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
@@ -79,8 +84,8 @@
     <div class="mobile-menu" id="mobileMenu" hidden>
       <nav class="container" aria-label="Menú móvil">
         <a href="#asignaturas"><span>01</span>Asignaturas</a>
-        <a href="asignaturas/ipo/index.html"><span>02</span>IPO</a>
-        <a href="asignaturas/ceac/index.html"><span>03</span>CEAC</a>
+        <a href="asignaturas/ipo/index.es.html"><span>02</span>IPO</a>
+        <a href="asignaturas/ceac/index.es.html"><span>03</span>CEAC</a>
         <a href="#como-funciona"><span>04</span>Cómo funciona</a>
       </nav>
     </div>
@@ -94,7 +99,7 @@
         <p class="hero-lead">Apuntes, flashcards, tests y progreso en un mismo lugar. Una biblioteca pensada para ir sumando asignaturas durante todo el curso.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#asignaturas">Ver mis asignaturas<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
-          <a class="btn btn-ghost" href="asignaturas/ceac/index.html">Empezar con CEAC</a>
+          <a class="btn btn-ghost" href="asignaturas/ceac/index.es.html">Empezar con CEAC</a>
         </div>
         <ul class="hero-meta">
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Contenido de tus apuntes</li>
@@ -134,7 +139,7 @@
       </div>
 
       <div class="subject-grid">
-        <a class="subject-card subject-card--ipo" href="asignaturas/ipo/index.html" data-unit-card="ipo" aria-label="Entrar en IPO, Itinerario Personal para la Ocupabilidad">
+        <a class="subject-card subject-card--ipo" href="asignaturas/ipo/index.es.html" data-unit-card="ipo" aria-label="Entrar en IPO, Itinerario Personal para la Ocupabilidad">
           <span class="subject-card-top">
             <span class="subject-code">IPO</span>
             <span class="subject-status"><span class="status-dot"></span>En curso</span>
@@ -156,7 +161,7 @@
           <span class="subject-cta">Entrar en la asignatura<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
         </a>
 
-        <a class="subject-card subject-card--ceac" href="asignaturas/ceac/index.html" data-unit-card="ceac" aria-label="Entrar en CEAC, Comunicació Empresarial i Atenció al Client">
+        <a class="subject-card subject-card--ceac" href="asignaturas/ceac/index.es.html" data-unit-card="ceac" aria-label="Entrar en CEAC, Comunicació Empresarial i Atenció al Client">
           <span class="subject-card-top">
             <span class="subject-code">CEAC</span>
             <span class="subject-status"><span class="status-dot"></span>Disponible</span>
@@ -224,14 +229,14 @@
         <h2 id="startTitle">Dos asignaturas, un mismo método</h2>
         <p>IPO ya tiene su primera unidad y CEAC acaba de llegar. Elige por dónde seguir: leer, practicar y comprobar lo aprendido.</p>
       </div>
-      <a class="btn btn-primary" href="asignaturas/ceac/index.html">Empezar con CEAC<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+      <a class="btn btn-primary" href="asignaturas/ceac/index.es.html">Empezar con CEAC<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <a class="brand" href="index.html" aria-label="Estudiar SMX, volver al inicio">
+        <a class="brand" href="index.es.html" aria-label="Estudiar SMX, volver al inicio">
           <span class="brand-mark brand-mark-smx">SMX<span class="brand-dot"></span></span>
           <span class="brand-text"><strong>Estudiar SMX</strong><small>Apuntes y práctica</small></span>
         </a>
@@ -241,20 +246,20 @@
         <div>
           <span>Estudiar SMX</span>
           <a href="#asignaturas">Asignaturas</a>
-          <a href="asignaturas/ipo/index.html">IPO</a>
-          <a href="asignaturas/ceac/index.html">CEAC</a>
+          <a href="asignaturas/ipo/index.es.html">IPO</a>
+          <a href="asignaturas/ceac/index.es.html">CEAC</a>
         </div>
         <div>
           <span>IPO</span>
-          <a href="asignaturas/ipo/unidad-1.html">Unidad 1</a>
-          <a href="asignaturas/ipo/unidad-1.html#flashcards">Flashcards</a>
-          <a href="asignaturas/ipo/unidad-1.html#test">Test</a>
+          <a href="asignaturas/ipo/unidad-1.es.html">Unidad 1</a>
+          <a href="asignaturas/ipo/unidad-1.es.html#flashcards">Flashcards</a>
+          <a href="asignaturas/ipo/unidad-1.es.html#test">Test</a>
         </div>
         <div>
           <span>CEAC</span>
-          <a href="asignaturas/ceac/unidad-1.html">Unidad 1</a>
-          <a href="asignaturas/ceac/unidad-1.html#flashcards">Flashcards</a>
-          <a href="asignaturas/ceac/unidad-1.html#test">Test</a>
+          <a href="asignaturas/ceac/unidad-1.es.html">Unidad 1</a>
+          <a href="asignaturas/ceac/unidad-1.es.html#flashcards">Flashcards</a>
+          <a href="asignaturas/ceac/unidad-1.es.html#test">Test</a>
         </div>
       </div>
     </div>
@@ -269,6 +274,7 @@
   </button>
 
   <script src="assets/js/units.js" defer></script>
+  <script src="assets/js/i18n.js" defer></script>
   <script src="assets/js/portal.js" defer></script>
 </body>
 </html>

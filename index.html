@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ca" data-theme="light">
+<html lang="ca" data-theme="light" data-alt-lang="index.es.html">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +24,7 @@
       } catch (e) {}
     })();
   </script>
+  <script src="assets/js/lang.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Salta al contingut</a>
@@ -64,6 +65,10 @@
       </nav>
 
       <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Idioma">
+          <span class="lang-option is-active" aria-current="true" lang="ca">CA</span>
+          <a class="lang-option" href="index.es.html" data-lang-link="es" hreflang="es" lang="es" aria-label="Canviar al castellà">ES</a>
+        </div>
         <a class="header-cta" href="#asignaturas">Entra a estudiar</a>
         <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Activa el tema fosc">
           <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
@@ -268,7 +273,8 @@
     <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
   </button>
 
-  <script src="assets/js/units.js" defer></script>
+  <script src="assets/js/units-ca.js" defer></script>
+  <script src="assets/js/i18n.js" defer></script>
   <script src="assets/js/portal.js" defer></script>
 </body>
 </html>

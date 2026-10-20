@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ca" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Estudiar SMX: apunts, flashcards, tests i progrés organitzats per assignatura. IPO i CEAC en un mateix espai d'estudi.">
+  <meta name="theme-color" content="#f5f1e8">
+  <title>Estudiar SMX | El teu espai d'estudi</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23c8502c'/%3E%3Ctext x='32' y='41' font-family='Georgia,serif' font-size='14' font-weight='700' fill='%23fffdf8' text-anchor='middle'%3ESMX%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('estudiarSMX.theme.v1');
+        if (!theme) {
+          var raw = localStorage.getItem('rutaFP.u1.v1');
+          var saved = raw ? JSON.parse(raw) : null;
+          theme = (saved && saved.theme) || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        }
+        document.documentElement.dataset.theme = theme;
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Salta al contingut</a>
+
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3Z"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-graduation" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></symbol>
+    <symbol id="i-trending" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  </svg>
+
+  <header class="site-header" id="top">
+    <div class="header-inner container">
+      <a class="brand" href="index.html" aria-label="Estudiar SMX, torna a l'inici">
+        <span class="brand-mark brand-mark-smx">SMX<span class="brand-dot"></span></span>
+        <span class="brand-text"><strong>Estudiar SMX</strong><small>Apunts i pràctica</small></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navegació principal">
+        <a href="#asignaturas">Assignatures</a>
+        <a href="asignaturas/ipo/index.html">IPO</a>
+        <a href="asignaturas/ceac/index.html">CEAC</a>
+        <a href="#como-funciona">Com funciona</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-cta" href="#asignaturas">Entra a estudiar</a>
+        <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Activa el tema fosc">
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+        </button>
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Obre el menú" aria-expanded="false" aria-controls="mobileMenu">
+          <svg class="icon icon-menu" aria-hidden="true"><use href="#i-menu"></use></svg>
+          <svg class="icon icon-close" aria-hidden="true"><use href="#i-x"></use></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav class="container" aria-label="Menú mòbil">
+        <a href="#asignaturas"><span>01</span>Assignatures</a>
+        <a href="asignaturas/ipo/index.html"><span>02</span>IPO</a>
+        <a href="asignaturas/ceac/index.html"><span>03</span>CEAC</a>
+        <a href="#como-funciona"><span>04</span>Com funciona</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero portal-hero container" aria-labelledby="portalTitle">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span>El teu espai d'estudi</p>
+        <h1 id="portalTitle"><span>Estudiar</span><span><em>SMX</em>.</span></h1>
+        <p class="hero-lead">Apunts, flashcards, tests i progrés en un mateix lloc. Una biblioteca pensada per anar sumant assignatures durant tot el curs.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#asignaturas">Veure les meves assignatures<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+          <a class="btn btn-ghost" href="asignaturas/ceac/index.html">Comença amb CEAC</a>
+        </div>
+        <ul class="hero-meta">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Contingut dels teus apunts</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>2 assignatures disponibles</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Progrés desat automàticament</li>
+        </ul>
+      </div>
+
+      <aside class="hero-panel" data-overall aria-label="Progrés del teu curs">
+        <div class="panel-top">
+          <span class="panel-label">El teu curs</span>
+          <span class="save-status"><span class="status-dot"></span>Es desa automàticament</span>
+        </div>
+        <div class="progress-hero">
+          <div class="progress-ring" data-overall-ring style="--p:0"><span data-overall-percent>0%</span></div>
+          <div class="progress-copy">
+            <strong>Tot el teu curs, d'un cop d'ull</strong>
+            <p data-overall-copy>2 assignatures, 10 blocs i 54 flashcards per anar al teu ritme.</p>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div><span data-overall-subjects>2</span><small>Assignatures</small></div>
+          <div><span data-overall-sections>0/10</span><small>Blocs</small></div>
+          <div><span data-overall-best>—</span><small>Millor test</small></div>
+        </div>
+        <a class="panel-link" href="#asignaturas"><span>Veure les meves assignatures</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+      </aside>
+    </section>
+
+    <section class="portal-catalog container" id="asignaturas" aria-labelledby="subjectsTitle">
+      <div class="section-heading compact">
+        <div>
+          <p class="kicker">La teva biblioteca</p>
+          <h2 id="subjectsTitle">Les meves assignatures</h2>
+        </div>
+        <p>Cada assignatura reuneix els seus propis apunts, pràctiques i tests. El progrés queda desat en aquest dispositiu.</p>
+      </div>
+
+      <div class="subject-grid">
+        <a class="subject-card subject-card--ipo" href="asignaturas/ipo/index.html" data-unit-card="ipo" aria-label="Entra a IPO, Itinerari Personal per a l'Ocupabilitat">
+          <span class="subject-card-top">
+            <span class="subject-code">IPO</span>
+            <span class="subject-status"><span class="status-dot"></span>En curs</span>
+          </span>
+          <span class="subject-card-body">
+            <span class="subject-kicker">Itinerari Personal per a l'Ocupabilitat</span>
+            <span class="subject-name">Formació professional: de l'aula a l'empresa</span>
+            <span class="subject-desc">El teu títol, les competències que busquen les empreses i el teu itinerari fins a l'ocupació.</span>
+            <span class="subject-tags">
+              <span>5 blocs</span>
+              <span>27 flashcards</span>
+              <span>20 preguntes</span>
+            </span>
+          </span>
+          <span class="subject-progress">
+            <span class="subject-progress-head"><span data-unit-percent>0%</span> completat</span>
+            <span class="subject-progress-bar"><span data-unit-bar style="--p:0%"></span></span>
+          </span>
+          <span class="subject-cta">Entra a l'assignatura<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+        </a>
+
+        <a class="subject-card subject-card--ceac" href="asignaturas/ceac/index.html" data-unit-card="ceac" aria-label="Entra a CEAC, Comunicació Empresarial i Atenció al Client">
+          <span class="subject-card-top">
+            <span class="subject-code">CEAC</span>
+            <span class="subject-status"><span class="status-dot"></span>Disponible</span>
+          </span>
+          <span class="subject-card-body">
+            <span class="subject-kicker">Comunicació Empresarial i Atenció al Client</span>
+            <span class="subject-name">Empresa, informació i comunicació</span>
+            <span class="subject-desc">Com s'organitza una empresa, com fa servir la informació i com es comunica dins i fora.</span>
+            <span class="subject-tags">
+              <span>5 blocs</span>
+              <span>27 flashcards</span>
+              <span>20 preguntes</span>
+            </span>
+          </span>
+          <span class="subject-progress">
+            <span class="subject-progress-head"><span data-unit-percent>0%</span> completat</span>
+            <span class="subject-progress-bar"><span data-unit-bar style="--p:0%"></span></span>
+          </span>
+          <span class="subject-cta">Entra a l'assignatura<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+        </a>
+
+        <article class="subject-placeholder subject-placeholder--wide">
+          <span class="subject-placeholder-icon" aria-hidden="true">+</span>
+          <div class="subject-placeholder-copy">
+            <span class="subject-placeholder-kicker">Properament</span>
+            <h3>Més assignatures</h3>
+            <p>Aquest espai està preparat per continuar afegint assignatures, unitats i nous apunts.</p>
+          </div>
+          <span class="subject-placeholder-note">La teva biblioteca creixerà amb tu</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="portal-how container" id="como-funciona" aria-labelledby="howTitle">
+      <div class="section-heading">
+        <p class="kicker">Com funciona</p>
+        <h2 id="howTitle">Estudiar sense perdre el fil</h2>
+        <p>Cada assignatura manté la mateixa estructura: primer entens, després practiques i al final comproves què has après.</p>
+      </div>
+      <div class="how-grid">
+        <article class="how-card">
+          <span class="how-icon"><svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg></span>
+          <span class="how-num">01</span>
+          <h3>Llegeix i comprèn</h3>
+          <p>Apunts clars, exemples i casos reals per entendre la teoria sense perdre't.</p>
+        </article>
+        <article class="how-card">
+          <span class="how-icon"><svg class="icon" aria-hidden="true"><use href="#i-target"></use></svg></span>
+          <span class="how-num">02</span>
+          <h3>Practica</h3>
+          <p>Flashcards, preguntes i exercicis per comprovar si de debò ho has interioritzat.</p>
+        </article>
+        <article class="how-card">
+          <span class="how-icon"><svg class="icon" aria-hidden="true"><use href="#i-trending"></use></svg></span>
+          <span class="how-num">03</span>
+          <h3>Mesura el teu progrés</h3>
+          <p>Marca els blocs que domines i segueix el teu avanç assignatura per assignatura.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="portal-callout container" aria-labelledby="startTitle">
+      <div>
+        <p class="kicker">Comença ara</p>
+        <h2 id="startTitle">Dues assignatures, un mateix mètode</h2>
+        <p>IPO ja té la seva primera unitat i CEAC acaba d'arribar. Tria per on continuar: llegir, practicar i comprovar què has après.</p>
+      </div>
+      <a class="btn btn-primary" href="asignaturas/ceac/index.html">Comença amb CEAC<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Estudiar SMX, torna a l'inici">
+          <span class="brand-mark brand-mark-smx">SMX<span class="brand-dot"></span></span>
+          <span class="brand-text"><strong>Estudiar SMX</strong><small>Apunts i pràctica</small></span>
+        </a>
+        <p>Una biblioteca d'estudi per organitzar les assignatures del curs, repassar amb intenció i no perdre el progrés.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <span>Estudiar SMX</span>
+          <a href="#asignaturas">Assignatures</a>
+          <a href="asignaturas/ipo/index.html">IPO</a>
+          <a href="asignaturas/ceac/index.html">CEAC</a>
+        </div>
+        <div>
+          <span>IPO</span>
+          <a href="asignaturas/ipo/unidad-1.html">Unitat 1</a>
+          <a href="asignaturas/ipo/unidad-1.html#flashcards">Flashcards</a>
+          <a href="asignaturas/ipo/unidad-1.html#test">Test</a>
+        </div>
+        <div>
+          <span>CEAC</span>
+          <a href="asignaturas/ceac/unidad-1.html">Unitat 1</a>
+          <a href="asignaturas/ceac/unidad-1.html#flashcards">Flashcards</a>
+          <a href="asignaturas/ceac/unidad-1.html#test">Test</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>Contingut elaborat a partir dels apunts d'IPO de Diego Ruíz Kutik i de CEAC (RA1). Material d'estudi independent.</p>
+      <p>© <span id="year">2026</span> Estudiar SMX · Fet per estudiar millor.</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Torna a dalt">
+    <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+  </button>
+
+  <script src="assets/js/units.js" defer></script>
+  <script src="assets/js/portal.js" defer></script>
+</body>
+</html>

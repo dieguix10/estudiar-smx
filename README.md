@@ -10,8 +10,11 @@ La web es bilingüe **catalán / castellano**. El catalán es el idioma por defe
 | --- | --- | --- | --- |
 | **IPO** · Itinerari Personal per a l'Ocupabilitat | `asignaturas/ipo/` | La FP i el teu títol | Disponible |
 | **CEAC** · Comunicació Empresarial i Atenció al Client | `asignaturas/ceac/` | Empresa i comunicació | Disponible |
+| **SOFC** · Sistemes Operatius i Fonaments de Codificació | `asignaturas/sofc/` | Del maquinari a la lògica | Disponible |
 
-CEAC trabaja el RA1 a partir de los apuntes de clase. Su test es de elaboración propia: solo el test de IPO reproduce preguntas oficiales del PDF.
+CEAC trabaja el RA1 a partir de los apuntes de clase. SOFC recoge los cinco módulos del temario de Sistemas Operatius i Fonaments de Codificació. Los tests de CEAC y SOFC son de elaboración propia: solo el test de IPO reproduce preguntas oficiales del PDF.
+
+En total, el portal reúne **3 asignaturas, 15 bloques y 82 flashcards**: IPO 27, CEAC 27 y SOFC 28.
 
 ## Estructura
 
@@ -25,9 +28,14 @@ Web para estudiar/
 │   │   ├── index.es.html           Asignatura IPO · castellano
 │   │   ├── unidad-1.html           Unidad 1 completa · catalán
 │   │   └── unidad-1.es.html        Unidad 1 completa · castellano
-│   └── ceac/
-│       ├── index.html              Asignatura CEAC · catalán
-│       ├── index.es.html           Asignatura CEAC · castellano
+│   ├── ceac/
+│   │   ├── index.html              Asignatura CEAC · catalán
+│   │   ├── index.es.html           Asignatura CEAC · castellano
+│   │   ├── unidad-1.html           Unidad 1 completa · catalán
+│   │   └── unidad-1.es.html        Unidad 1 completa · castellano
+│   └── sofc/
+│       ├── index.html              Asignatura SOFC · catalán
+│       ├── index.es.html           Asignatura SOFC · castellano
 │       ├── unidad-1.html           Unidad 1 completa · catalán
 │       └── unidad-1.es.html        Unidad 1 completa · castellano
 ├── assets/
@@ -39,6 +47,8 @@ Web para estudiar/
 │       ├── data-ca.js              Contenido y actividades de IPO · catalán
 │       ├── data-ceac.js            Contenido y actividades de CEAC · castellano
 │       ├── data-ceac-ca.js         Contenido y actividades de CEAC · catalán
+│       ├── data-sofc.js            Contenido y actividades de SOFC · castellano
+│       ├── data-sofc-ca.js         Contenido y actividades de SOFC · catalán
 │       ├── i18n.js                 Textos generados por JavaScript en ambos idiomas
 │       ├── lang.js                 Selector CA/ES y preferencia guardada
 │       ├── app.js                  Motor de estudio y progreso de una unidad
@@ -49,7 +59,7 @@ Web para estudiar/
 La navegación sigue tres niveles:
 
 1. **Estudiar SMX** (`index.html`): catálogo de asignaturas y progreso global.
-2. **Asignatura** (`asignaturas/ipo/index.html` o `asignaturas/ceac/index.html`): progreso de la asignatura, unidades y temas.
+2. **Asignatura** (`asignaturas/ipo/index.html`, `asignaturas/ceac/index.html` o `asignaturas/sofc/index.html`): progreso de la asignatura, unidades y temas.
 3. **Unidad** (`asignaturas/<asignatura>/unidad-1.html`): temario, práctica, flashcards, test, glosario, autoevaluación, plan y resumen.
 
 Cada página catalana tiene su hermana castellana con el sufijo `.es.html`. Los enlaces internos de cada versión apuntan a la versión del mismo idioma; el selector de la cabecera cambia de una a otra. Los enlaces incluyen siempre el nombre del archivo para que funcionen tanto abriendo el proyecto en local como desde un servidor estático.
@@ -59,6 +69,7 @@ Cada página catalana tiene su hermana castellana con el sufijo `.es.html`. Los 
 - Cada unidad guarda su estado por separado y **las dos versiones lingüísticas usan la misma clave**:
   - IPO · Unidad 1: `rutaFP.u1.v1` (clave histórica, se conserva para no perder progreso).
   - CEAC · Unidad 1: `rutaFP.ceac.u1.v1`.
+  - SOFC · Unidad 1: `rutaFP.sofc.u1.v1`.
 - El tema claro/oscuro se guarda de forma global en `estudiarSMX.theme.v1`.
 - El idioma elegido se recuerda en `estudiarSMX.lang.v1`. La primera visita abre en catalán.
 - Si todavía no existe la clave global del tema, se reutiliza el tema guardado en alguna de las unidades para mantener la preferencia anterior.
@@ -74,7 +85,7 @@ Cada página catalana tiene su hermana castellana con el sufijo `.es.html`. Los 
 
 ```js
 window.SMX_UNITS = {
-  // ... IPO y CEAC
+  // ... IPO, CEAC y SOFC
   bd: {
     subjectId: 'bd',
     code: 'BD',
@@ -153,6 +164,8 @@ window.STUDY_CONFIG = {
 - Los textos que genera JavaScript están en `assets/js/i18n.js`, con diccionarios `ca` y `es`. El idioma se deduce de `<html lang="...">`.
 - Las páginas catalanas y castellanas comparten `styles.css`, `app.js` y `portal.js`; solo cambian el contenido HTML, los datos y el registro de unidades.
 - Los archivos `.es.html` son las versiones castellanas. Los archivos sin sufijo son las versiones catalanas y el idioma por defecto.
+- Todo el contenido visible está traducido: interfaz, navegación, apuntes, flashcards, test, glosario, resumen, autoevaluación y plan. También los textos que genera JavaScript.
+- Cada par de páginas declara `data-alt-lang` y el selector conserva el ancla actual al cambiar de idioma. El progreso y el tema son compartidos porque ambas versiones usan la misma `storageKey`.
 
 ## Desarrollo local
 

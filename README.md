@@ -167,6 +167,41 @@ window.STUDY_CONFIG = {
 - Todo el contenido visible está traducido: interfaz, navegación, apuntes, flashcards, test, glosario, resumen, autoevaluación y plan. También los textos que genera JavaScript.
 - Cada par de páginas declara `data-alt-lang` y el selector conserva el ancla actual al cambiar de idioma. El progreso y el tema son compartidos porque ambas versiones usan la misma `storageKey`.
 
+## Instalarla como app (PWA)
+
+El proyecto incluye lo necesario para instalarlo como una app en iOS, Android y escritorio:
+
+- `manifest.json`: nombre, iconos, colores, accesos directos y modo `standalone`.
+- `sw.js`: service worker que guarda el material para consultarlo sin conexión.
+- `assets/js/pwa.js`: registra el service worker en todas las páginas.
+- `assets/icons/`: iconos de 192, 512 y 180 px, incluido uno `maskable` para Android.
+
+La instalación necesita **HTTPS** (o `localhost` para probar). Abrir los archivos con `file://` no permite instalar la app.
+
+### Publicar la web
+
+La opción más rápida es arrastrar la carpeta completa a [Netlify Drop](https://app.netlify.com/drop). También sirven Vercel, Cloudflare Pages o GitHub Pages. No hay que compilar nada: es una web estática.
+
+### Instalar en Android
+
+1. Abre la URL publicada en **Chrome**.
+2. Toca el menú de tres puntos.
+3. Elige **Instalar aplicación** o **Añadir a pantalla de inicio**.
+
+### Instalar en iPhone o iPad
+
+1. Abre la URL publicada en **Safari** (en iOS no funciona desde Chrome).
+2. Toca el botón **Compartir**.
+3. Elige **Añadir a pantalla de inicio**.
+
+La app se abre sin la barra del navegador y conserva el progreso guardado en el dispositivo.
+
+### Actualizaciones
+
+Cuando cambies el CSS, el JavaScript o los apuntes, cambia la versión de `CACHE_NAME` en `sw.js` (por ejemplo, de `estudiar-smx-v1` a `estudiar-smx-v2`). Así los dispositivos descargan la versión nueva y eliminan la caché anterior.
+
+Si más adelante quieres publicarla en App Store o Google Play, se puede envolver con [PWABuilder](https://www.pwabuilder.com/) o Capacitor. Para uso personal, la instalación desde el navegador es la vía más sencilla y no requiere cuentas de desarrollador.
+
 ## Desarrollo local
 
 Puedes abrir `index.html` directamente en el navegador. Para probar el sitio como un servidor estático:
